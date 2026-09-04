@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.multicoder.mmutils.ui.MainScreen;
 
+@SuppressWarnings("unused")
 public class Main {
     public static final Logger LOGGER = LogManager.getLogger("MMUtils");
     static void main() {
