@@ -2,6 +2,7 @@ package org.multicoder.mmutils.prj;
 
 import com.google.gson.JsonObject;
 
+@SuppressWarnings("unused")
 public class ModHost {
     public String platformName;
     public String platformURL;

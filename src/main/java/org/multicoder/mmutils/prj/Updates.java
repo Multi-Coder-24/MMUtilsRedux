@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 
 import java.util.UUID;
 
+@SuppressWarnings("unused")
 public class Updates {
     public String name;
     public UUID id;
