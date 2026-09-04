@@ -9,6 +9,7 @@ This app is freeware however any monetary gift is greatly appreciated.
 ### Key Notes
 - Java Version: 25
 - Tested OS: Windows
+- UI Framework: Java Swing
 - Bundles External Libraries: Yes
 - Libraries Bundled: Google GSON, Apache Log4j Core
 - Bundled Library Versions; GSON:2.14.0, Log4j-Core:2.26.0
