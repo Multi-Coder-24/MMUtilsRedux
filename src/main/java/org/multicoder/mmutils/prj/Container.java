@@ -52,19 +52,13 @@ public class Container {
             JsonObject vcsMappings = mappings.toJson();
             object.add("mappings", vcsMappings);
             JsonArray updates = new JsonArray();
-            modUpdates.forEach(update -> {
-                updates.add(update.toJson());
-            });
+            modUpdates.forEach(update -> updates.add(update.toJson()));
             object.add("updates", updates);
             JsonArray hosts = new JsonArray();
-            modHosts.forEach(host -> {
-                hosts.add(host.toJson());
-            });
+            modHosts.forEach(host -> hosts.add(host.toJson()));
             object.add("hosts", hosts);
             JsonArray versions = new JsonArray();
-            publishedVersions.forEach(publishedVersion -> {
-                versions.add(publishedVersion.toJson());
-            });
+            publishedVersions.forEach(publishedVersion -> versions.add(publishedVersion.toJson()));
             object.add("versions", versions);
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             JsonWriter writer = new JsonWriter(new FileWriter(path));
