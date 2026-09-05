@@ -5,7 +5,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.FileOutputStream;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -85,10 +88,9 @@ public class Container {
             rootElement.appendChild(publishingElement);
             rootElement.appendChild(updatesElement);
             document.appendChild(rootElement);
-            FileOutputStream fos = new FileOutputStream(path);
-            fos.write(document.toString().getBytes());
-            fos.flush();
-            fos.close();
+            document.normalizeDocument();
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            transformerFactory.newTransformer().transform(new DOMSource(document),new StreamResult(new File(path)));
 
         } catch (Exception e) {
             Main.LOGGER.error("Error writing file: {}", path, e);
