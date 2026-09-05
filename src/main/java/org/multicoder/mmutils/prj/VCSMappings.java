@@ -1,6 +1,5 @@
 package org.multicoder.mmutils.prj;
 
-import com.google.gson.JsonObject;
 
 @SuppressWarnings("unused")
 public class VCSMappings {
@@ -17,19 +16,5 @@ public class VCSMappings {
         hostingPlatform = "";
         hostURL = "";
         branches = "";
-    }
-
-    public VCSMappings(JsonObject jsonObject){
-        hostingPlatform = jsonObject.get("hostingPlatform").getAsString();
-        hostURL = jsonObject.get("hostURL").getAsString();
-        branches = jsonObject.get("branches").getAsString();
-    }
-
-    public JsonObject toJson(){
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("hostingPlatform", hostingPlatform);
-        jsonObject.addProperty("hostURL", hostURL);
-        jsonObject.addProperty("branches", branches);
-        return jsonObject;
     }
 }

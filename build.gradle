@@ -12,9 +12,7 @@ repositories {
 }
 
 dependencies {
-    shadow(implementation("com.google.code.gson:gson:2.14.0"))
     shadow(implementation("org.apache.logging.log4j:log4j-core:2.26.0"))
-
 }
 
 application{
