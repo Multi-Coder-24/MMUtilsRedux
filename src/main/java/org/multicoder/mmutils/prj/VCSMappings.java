@@ -1,6 +1,8 @@
 package org.multicoder.mmutils.prj;
 
 
+import org.w3c.dom.Element;
+
 @SuppressWarnings("unused")
 public class VCSMappings {
     public String hostingPlatform;
@@ -16,5 +18,10 @@ public class VCSMappings {
         hostingPlatform = "";
         hostURL = "";
         branches = "";
+    }
+    public void serialize(Element mappings){
+        mappings.setAttribute("hostingPlatform", hostingPlatform);
+        mappings.setAttribute("hostURL", hostURL);
+        mappings.setAttribute("branches", branches);
     }
 }

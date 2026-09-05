@@ -1,15 +1,21 @@
 <root>
   <ModInfo name="sample mod" version="0.0.1" id="00000000-0000-0000-0000-000000000000" gameVersion="1.21.11,26.1.1"
-           modLoaders="Fabric, NeoForge" shortDescription="An Example Mod Project File For Demonstration"/>
+           modLoaders="Fabric, NeoForge" shortDescription="An Example Mod Project File For Demonstration" authors="multicoder"/>
   <VCSMappings>
     <mapping repositoryHost="GitHub" repositoryURL="https://github.com" branches="NeoForge, Fabric"/>
   </VCSMappings>
   <Publishing>
     <ModHost platformName="modrinth" platformID="00000000-0000-0000-0000-000000000001" platformURL="https://modrinth.com/" modURL="https://modrinth.com/"/>
     <PublishedVersions>
-      <Version publishID="00000000-0000-0000-0000-000000000002" hostingPlatformID="00000000-0000-0000-0000-000000000001" publishURL="https://modrinth.com/">
+      <Version publishID="00000000-0000-0000-0000-000000000002" hostingPlatformID="00000000-0000-0000-0000-000000000001" publishURL="https://modrinth.com/" dateStamp="01/01/0001 00:00">
               Sample Changelog
       </Version>
     </PublishedVersions>
   </Publishing>
+  <Updates>
+    <update name="Example Update" id="00000000-0000-0000-0000-000000000003" type="3" datestamp="01/01/0001 00:00:00">
+      Content Of Update
+      datestamp format dd/mm/yyyy HH:MM:SS
+    </update>
+  </Updates>
 </root>

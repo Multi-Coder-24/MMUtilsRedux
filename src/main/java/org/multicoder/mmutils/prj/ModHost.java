@@ -1,5 +1,8 @@
 package org.multicoder.mmutils.prj;
 
+
+import org.w3c.dom.Element;
+
 @SuppressWarnings("unused")
 public class ModHost {
     public String platformName;
@@ -10,4 +13,11 @@ public class ModHost {
         platformURL = params[1];
         modURL = params[2];
     }
+
+    public void serialize(Element container){
+        container.setAttribute("platformName", platformName);
+        container.setAttribute("platformURL", platformURL);
+        container.setAttribute("modURL", modURL);
+    }
+
 }
