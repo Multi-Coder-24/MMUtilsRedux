@@ -34,7 +34,7 @@ public class Container {
         gameVersions = params[3];
         modLoaders = params[4];
         shortDescription = params[5];
-        id = UUID.randomUUID();
+        id = UUID.fromString(params[6]);
         mappings = new ArrayList<>();
         modUpdates = new ArrayList<>();
         modHosts = new ArrayList<>();
